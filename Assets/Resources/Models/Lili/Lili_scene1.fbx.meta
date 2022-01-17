@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 383b12271b1cd2b418a84c9f4151d711
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 7324798680985764830
+    second: metarig|Arm
+  - first:
+      74: -1877742002525031179
+    second: metarig|Blink
+  - first:
+      74: 8431863460217824353
+    second: "metarig|Lili sc\xE8ne 1"
+  - first:
+      74: -7108260239331776576
+    second: "metarig|Lili_sc\xE8ne1"
+  - first:
+      74: 1120497344666032938
+    second: "metarig|Lili_sc\xE8ne3"
+  - first:
+      74: 6447136582203125179
+    second: metarig|metarig|metarig|Arm|metarig|Arm
+  - first:
+      74: -3256600074058135855
+    second: metarig|metarig|metarig|Blink|metarig|Blink
+  - first:
+      74: 7295648214092584565
+    second: "metarig|metarig|metarig|Lili sc\xE8ne 1|metarig|Lili sc\xE8ne 1"
+  - first:
+      74: -7477090465069479665
+    second: "metarig|metarig|metarig|Lili_sc\xE8ne1|metarig|Lili_sc\xE8ne1"
+  - first:
+      74: 4782182284323938409
+    second: "metarig|metarig|metarig|Lili_sc\xE8ne3|metarig|Lili_sc\xE8ne3"
+  - first:
+      74: 1156521138549981823
+    second: metarig|metarig|metarig|metarig|metarig|Arm|metarig|Arm|metarig|metarig
+  - first:
+      74: 8236185826459424695
+    second: metarig|metarig|metarig|metarig|metarig|Blink|metarig|Blink|metarig|met
+  - first:
+      74: 1314540358495994474
+    second: "metarig|metarig|metarig|metarig|metarig|Lili sc\xE8ne 1|metarig|Lili
+      sc\xE8"
+  - first:
+      74: 4336978965551838519
+    second: "metarig|metarig|metarig|metarig|metarig|Lili_sc\xE8ne1|metarig|Lili_sc\xE8n"
+  - first:
+      74: -9214436464050827032
+    second: "metarig|metarig|metarig|metarig|metarig|Lili_sc\xE8ne3|metarig|Lili_sc\xE8n"
+  - first:
+      74: -1716365155913483133
+    second: metarig|metarig|metarig|LiliPoseLib|metarig|LiliPoseLib
+  - first:
+      74: -2028982531447775692
+    second: metarig|metarig|metarig|metarig|metarig|metarig|metarig|Arm|metarig|Arm
+  - first:
+      74: 8681526663426047269
+    second: metarig|metarig|metarig|metarig|metarig|LiliPoseLib|metarig|LiliPoseLib
+  - first:
+      74: 8143424054127396244
+    second: metarig|metarig|metarig|metarig|metarig|metarig|metarig|metarig|metarig
+  - first:
+      74: 8439346251507076904
+    second: metarig|metarig|metarig|metarig|metarig|metarig|metarig|Blink|metarig|B
+  - first:
+      74: -6962002606158836455
+    second: metarig|metarig|metarig|metarig|metarig|metarig|metarig|LiliPoseLib|met
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chaussettes.001
+    second: {fileID: 2100000, guid: a4cd72db436293f43a913665791646a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chaussures.001
+    second: {fileID: 2100000, guid: 0a79f7114287d634d8f8da1f8787c537, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cheveux.001
+    second: {fileID: 2100000, guid: 2534fc4d9073d094ebacf2cc0140dc2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corps.001
+    second: {fileID: 2100000, guid: 5df93f35ab37e6644997bce0d1af7db1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dents.001
+    second: {fileID: 2100000, guid: 923263d01ba90bd4289a82892de01926, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lacets.001
+    second: {fileID: 2100000, guid: f1f283ebe93a70542ac49d17c9d8bde0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Robe.001
+    second: {fileID: 2100000, guid: 886c9bdd69d287245915a2da8c24e26b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tete.001
+    second: {fileID: 2100000, guid: 8169b0b6426aa414fab57ffce87de9e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yeux.001
+    second: {fileID: 2100000, guid: 27bdd6c77b3e22a458ab6a7352505c4a, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: metarig
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
