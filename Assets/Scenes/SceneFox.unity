@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 72432194}
   - component: {fileID: 72432193}
   m_Layer: 0
-  m_Name: Renard
+  m_Name: Fox
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 315958623}
   - component: {fileID: 315958622}
   m_Layer: 0
-  m_Name: Champs
+  m_Name: Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 335272804}
   - component: {fileID: 335272805}
   m_Layer: 0
-  m_Name: Souris (1)
+  m_Name: Mouse (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 488147547}
   - component: {fileID: 488147548}
   m_Layer: 0
-  m_Name: Souris (2)
+  m_Name: Mouse (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 1620994318}
   - component: {fileID: 1620994319}
   m_Layer: 0
-  m_Name: Souris
+  m_Name: Mouse
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
