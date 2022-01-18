@@ -43,7 +43,7 @@ public class PhotoButton : MonoBehaviour
         byte[] bytes = photo.EncodeToPNG();
         File.WriteAllBytes(Application.dataPath+"/ecailles.png", bytes);
         webcamTexture.Stop();
-        SceneManager.LoadScene("ScenePoissonTest");
+        SceneManager.LoadScene("SceneFish");
 
         Debug.Log("You have clicked the button!");
         
