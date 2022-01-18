@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 47768691}
   m_Layer: 0
   m_Name: carrot-5934702_1280 (1)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 333556211}
   m_Layer: 0
   m_Name: carrot-5934702_1280 (2)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c302700acc5fb9a4fa15ea6354cae869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 17214818}
 --- !u!4 &536989896
 Transform:
   m_ObjectHideFlags: 0
@@ -653,7 +654,7 @@ GameObject:
   - component: {fileID: 1569552788}
   m_Layer: 0
   m_Name: carrot-5934702_1280
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
