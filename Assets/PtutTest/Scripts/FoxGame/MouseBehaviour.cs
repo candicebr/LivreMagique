@@ -21,9 +21,9 @@ public class MouseBehaviour : MonoBehaviour
     void Update()
     {
         float distance = Vector2.Distance(target.position, transform.position);
-        if (distance < 2) //à partir d'une certaine distance, la souris s'enfuit à l'opposé du joueur
+        if (distance < 2.5) //à partir d'une certaine distance, la souris s'enfuit à l'opposé du joueur
             run = true;
-        else if (distance > 5) //elle arrête de s'enfuir si elle est assez loin
+        else if (distance > 8) //elle arrête de s'enfuir si elle est assez loin
             run = false;
 
         if (run)
