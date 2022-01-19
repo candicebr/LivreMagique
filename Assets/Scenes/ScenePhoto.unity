@@ -750,7 +750,7 @@ RectTransform:
   m_GameObject: {fileID: 772441531}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 374.9414, y: 374.9414, z: 0}
+  m_LocalScale: {x: 378.952, y: 284.214, z: 0}
   m_Children: []
   m_Father: {fileID: 242221571}
   m_RootOrder: 7
@@ -758,7 +758,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -30, y: 83}
-  m_SizeDelta: {x: 4, y: 3}
+  m_SizeDelta: {x: 4, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &772441536
 CanvasRenderer:
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 929338098}
   - component: {fileID: 929338097}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: sea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
