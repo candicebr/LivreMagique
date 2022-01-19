@@ -14,7 +14,7 @@ public class FishController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canMove = true;
+        canMove = false;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -31,5 +31,15 @@ public class FishController : MonoBehaviour
             rb.velocity = direction * moveSpeed * Time.deltaTime;
         else
             rb.velocity = Vector2.zero;
+    }
+
+    public void move()
+    {
+        canMove = true;
+    }
+
+    public void stop()
+    {
+        canMove = false;
     }
 }

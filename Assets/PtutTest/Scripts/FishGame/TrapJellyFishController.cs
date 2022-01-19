@@ -8,7 +8,6 @@ public class TrapJellyFishController : MonoBehaviour
 
     private float moveSpeed; // moving speed
     private float speed; // floating speed
-    private Quaternion initialRotation;
 
     private bool trapped;
     private bool floatup;
@@ -17,19 +16,16 @@ public class TrapJellyFishController : MonoBehaviour
     private Rigidbody2D rb;
     private Transform target;
 
-    float random;
 
     // Start is called before the first frame update
     void Start()
     {
         moveSpeed = 3000; // moving speed
         speed = 20; // floating speed
-        initialRotation = transform.rotation;
         trapped = true;
 
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
-        random = Random.Range(1.0f, 2.0f);
 
         floatup = false;
     }
@@ -40,7 +36,7 @@ public class TrapJellyFishController : MonoBehaviour
         if (trapped)
         {
             Time.timeScale = 1.0f;
-            timeCounter = Time.deltaTime * speed * random;
+            timeCounter = Time.deltaTime * speed;
 
             if (floatup)
                 StartCoroutine(floatingup());
@@ -51,7 +47,7 @@ public class TrapJellyFishController : MonoBehaviour
         {
             Vector2 direction = transform.position - target.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward) * initialRotation;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, timeCounter);
 
             rb.velocity = direction.normalized * moveSpeed * Time.deltaTime;
