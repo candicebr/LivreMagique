@@ -15,7 +15,7 @@ public class LoadTextFish : MonoBehaviour
         myrenderer.material.mainTextureOffset = new Vector2(-1, 10);
         myrenderer.material.mainTexture = photo;*/
 
-        GetComponent<Image>().sprite = LoadNewSprite(Application.dataPath + "/ecailles.png");
+        GetComponent<Image>().sprite = LoadNewSprite(Application.persistentDataPath + "/ecailles.png");
     }
 
     // Update is called once per frame
@@ -65,10 +65,8 @@ public class LoadTextFish : MonoBehaviour
 
     public Sprite LoadNewSprite(string FilePath, float PixelsPerUnit = 100.0f)
     {
-
         // Load a PNG or JPG image from disk to a Texture2D, assign this texture to a new sprite and return its reference
 
-        //Sprite NewSprite = new Sprite();
         Texture2D SpriteTexture = LoadTexture(FilePath);
         Sprite NewSprite = Sprite.Create(SpriteTexture, new Rect(0, 0, SpriteTexture.width, SpriteTexture.height), new Vector2(0, 0), PixelsPerUnit);
 

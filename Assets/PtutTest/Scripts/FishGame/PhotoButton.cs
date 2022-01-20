@@ -41,7 +41,7 @@ public class PhotoButton : MonoBehaviour
         screenrenderer.material.mainTexture = photo;
 
         byte[] bytes = photo.EncodeToPNG();
-        File.WriteAllBytes(Application.dataPath+"/ecailles.png", bytes);
+        File.WriteAllBytes(Application.persistentDataPath+"/ecailles.png", bytes);
         webcamTexture.Stop();
     }
 }
