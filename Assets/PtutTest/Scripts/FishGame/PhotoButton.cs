@@ -15,16 +15,10 @@ public class PhotoButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button btn = GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
-
         webcamTexture = new WebCamTexture();
-        Debug.Log(webcamTexture.deviceName);
-        screenrenderer = GameObject.Find("WebCamScreen").GetComponent<Renderer>();
+        screenrenderer = GetComponent<Renderer>();
         screenrenderer.material.mainTexture = webcamTexture;
         webcamTexture.Play();
-
-       
     }
 
     // Update is called once per frame
@@ -33,7 +27,13 @@ public class PhotoButton : MonoBehaviour
         
     }
 
-    void TaskOnClick()
+    public void LiveCam()
+    {
+        screenrenderer.material.mainTexture = webcamTexture;
+        webcamTexture.Play();
+    }
+
+    public void TakePicture()
     {
         Texture2D photo = new Texture2D(webcamTexture.width, webcamTexture.height);
         photo.SetPixels(webcamTexture.GetPixels());
@@ -41,11 +41,7 @@ public class PhotoButton : MonoBehaviour
         screenrenderer.material.mainTexture = photo;
 
         byte[] bytes = photo.EncodeToPNG();
-        File.WriteAllBytes(Application.dataPath+"/ecailles.png", bytes);
+        File.WriteAllBytes(Application.persistentDataPath+"/ecailles.png", bytes);
         webcamTexture.Stop();
-        SceneManager.LoadScene("ScenePoissonTest");
-
-        Debug.Log("You have clicked the button!");
-        
     }
 }
