@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private Ray ray;
     private RaycastHit Hit;
     public Sprite diggedDirt;
+    private GameObject burrow;
 
     private int goodCaseDigged;
     private int badCaseDigged;
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     public Animator animator;
     public Text scoreText;
 
+    private bool EndGame;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +33,16 @@ public class GameManager : MonoBehaviour
         badCaseDigged = 0;
         goodCaseToDigged = 0;
 
+        burrow = GameObject.Find("Burrow");
+
         foreach (GameObject dirt in dirts)
         {
             if (dirt.GetComponent<DirtInformation>().isGood && dirt.GetComponent<SpriteRenderer>().sprite.name == "dirt")
                 goodCaseToDigged++;
         }
         Debug.Log("nb good : " + goodCaseToDigged);
+
+        EndGame = false;
     }
 
     // Update is called once per frame
@@ -72,9 +79,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Tu as creusé : " + goodCaseDigged + "bonnes cases et " + badCaseDigged + " mauvaises.");
             animator.SetTrigger("EndGame");
-
+            burrow.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 1);
+            EndGame = true;
         }
         scoreText.text = "Score : " + goodCaseDigged + " / " + goodCaseToDigged;
     }
 
+    public bool GetEndGame() { return EndGame; }
 }

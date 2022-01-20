@@ -26,23 +26,27 @@ public class DirtInformation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _time += Time.deltaTime;
-        if ((int)_time%9 == 0)
+        bool EndGame = GameObject.Find("GameManager").GetComponent<GameManager>().GetEndGame();
+        if (!EndGame)
         {
-            if (isGood)
-                gameObject.GetComponent<SpriteRenderer>().color = goodColor;
+            _time += Time.deltaTime;
+            if ((int)_time % 9 == 0)
+            {
+                if (isGood)
+                    gameObject.GetComponent<SpriteRenderer>().color = goodColor;
+                else
+                    gameObject.GetComponent<SpriteRenderer>().color = badColor;
+
+            }
             else
-                gameObject.GetComponent<SpriteRenderer>().color = badColor;
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = neutralColor;
+            }
 
-        }
-        else
-        {
-            gameObject.GetComponent<SpriteRenderer>().color = neutralColor;
-        }
-
-        if (gameObject.GetComponent<SpriteRenderer>().sprite.name == "dirtdugged")
-        {
-            isDigged=true;
+            if (gameObject.GetComponent<SpriteRenderer>().sprite.name == "dirtdugged")
+            {
+                isDigged = true;
+            }
         }
     }
 
