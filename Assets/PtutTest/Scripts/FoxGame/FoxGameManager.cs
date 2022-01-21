@@ -21,7 +21,7 @@ public class FoxGameManager : MonoBehaviour
             count--;
         }
         if (count == 0)
-            SceneManager.LoadScene("Scene1");
+            SceneManager.LoadScene("Scene1_new");
 
     }
 }
