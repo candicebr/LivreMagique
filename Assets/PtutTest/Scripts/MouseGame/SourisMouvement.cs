@@ -55,8 +55,7 @@ public class SourisMouvement : MonoBehaviour
             if (timer >= 1f)
             {   
                 revealFlower();
-                Debug.Log("victory");
-                SceneManager.LoadScene("Scene1");
+                SceneManager.LoadScene("Scene1_new");
             }
         }
         
