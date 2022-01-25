@@ -23,24 +23,25 @@ public class TerreCreuse : MonoBehaviour
     {
        Vector3 positionSouris = GameObject.Find("Souris").transform.position;
 
-       if ((positionSouris - transform.position).magnitude < 1.5f)
-       {
-           timer += Time.deltaTime;
-           if (!trou) 
-           { 
-              sourisCreuse = true;
-              spriteRenderer.sprite = petitTrouSprite;
+        if ((positionSouris - transform.position).magnitude < 1.5f)
+        {
+            timer += Time.deltaTime;
+            if (!trou)
+            {
+                sourisCreuse = true;
+                spriteRenderer.sprite = petitTrouSprite;
+            
+                if (timer > 1f)
+                {
+                    spriteRenderer.sprite = trouSprite;
+                    trou = true;
+                    GameObject.Find("Souris").GetComponent<SourisMouvement>().increaseCompteur();
+                    sourisCreuse = false;
+                }
             }
-
-           if (timer > 1f)
-           {
-                spriteRenderer.sprite = trouSprite;
-                trou = true;
-                sourisCreuse = false;
-            }
-       } else
-       {
-         timer = 0.0f;
-       }
+        }
+        else {
+            timer = 0.0f;
+        }
     }
 }

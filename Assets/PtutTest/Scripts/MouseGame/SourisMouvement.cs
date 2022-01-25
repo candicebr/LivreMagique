@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SourisMouvement : MonoBehaviour
@@ -16,13 +17,22 @@ public class SourisMouvement : MonoBehaviour
     private bool victory = false;
 
     public Sprite fleur;
+    public Image progressBar;
+    float FillSpeed = 0.2f;
+    AudioSource audioEndGame;
+    bool EndGame = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
+
         // firstPosition = transform.position;
         //direction = transform.position;
         touchPosition = transform.position;
+        progressBar.fillAmount = 0;
+        audioEndGame = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +58,10 @@ public class SourisMouvement : MonoBehaviour
             }
             
         }
+
+        if (progressBar.fillAmount < compteur / 9.0f)
+            progressBar.fillAmount += FillSpeed * Time.deltaTime;
+
         if (victory)
         {
             timer += Time.deltaTime;
@@ -55,16 +69,24 @@ public class SourisMouvement : MonoBehaviour
             if (timer >= 1f)
             {   
                 revealFlower();
-                SceneManager.LoadScene("Scene1_new");
+                // Change scene
+                if (EndGame && !audioEndGame.isPlaying)
+                    SceneManager.LoadScene("Scene1_new");
+                //EndGame audio
+                else if (!audioEndGame.isPlaying)
+                {
+                    audioEndGame.Play();
+                    EndGame = true;
+                }
             }
         }
-        
+
     }
 
     public void increaseCompteur()
     {
         compteur++;
-        if(compteur == 3)
+        if (compteur == 9)
         {
             victory = true;
         }

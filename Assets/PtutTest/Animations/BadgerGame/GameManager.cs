@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,12 +21,19 @@ public class GameManager : MonoBehaviour
 
     public Animator animator;
     public Text scoreText;
+    public Image progressBar;
+    float FillSpeed = 0.2f;
 
     private bool EndGame;
+    AudioSource audioEndGame;
 
     // Start is called before the first frame update
     void Start()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+
+        progressBar.fillAmount = 0;
+
         cam = Camera.main.transform.GetComponent<Camera>();
 
         dirts = GameObject.FindGameObjectsWithTag("DirtUndigged");
@@ -43,6 +51,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("nb good : " + goodCaseToDigged);
 
         EndGame = false;
+        audioEndGame = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -80,9 +89,25 @@ public class GameManager : MonoBehaviour
             Debug.Log("Tu as creusé : " + goodCaseDigged + "bonnes cases et " + badCaseDigged + " mauvaises.");
             animator.SetTrigger("EndGame");
             burrow.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 1);
-            EndGame = true;
+
+            // Change scene
+            if (EndGame && !audioEndGame.isPlaying)
+            {
+                Screen.orientation = ScreenOrientation.Portrait;
+                SceneManager.LoadScene("Scene1_new");
+            }
+            //EndGame audio
+            else if (!audioEndGame.isPlaying)
+            {
+                audioEndGame.Play();
+                EndGame = true;
+            }
         }
-        scoreText.text = "Score : " + goodCaseDigged + " / " + goodCaseToDigged;
+
+        //scoreText.text = "Score : " + goodCaseDigged + " / " + goodCaseToDigged;
+        //Progress Bar
+        if (progressBar.fillAmount < (float)goodCaseDigged / (float)goodCaseToDigged)
+            progressBar.fillAmount += FillSpeed * Time.deltaTime;
     }
 
     public bool GetEndGame() { return EndGame; }
