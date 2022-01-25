@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -536,34 +536,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325207723}
   m_CullTransparentMesh: 0
---- !u!21 &357250046
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'trou RVBpetitMaterial
-
-    151746'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a92f82c0497387c49b6a086d1e1c45f9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &397749354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,7 +2138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1319921370
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2277,6 +2249,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319921369}
   m_CullTransparentMesh: 0
+--- !u!21 &1330568781
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'Scene2Material
+
+    174468'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 17f5947032724e17ad450d4e9c2f7ba0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1352256017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,17 +2346,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Oh, re bonjour ! Tu as trouv\xE9 le chemin ? Super ! Laisse-moi alors
-    te raconter une de mes aventures \u2026 \nUn jour, lors d\u2019une de mes balades
-    quotidiennes, \xE0 c\xF4t\xE9 des vignes et du domaine Sainte Roseline, j\u2019ai
-    fait une dr\xF4le de rencontre.. tu ne vas pas me croire.... Je suis  tomb\xE9e
-    nez \xE0 nez avec un petit renard au pelage extraordinaire\u2026 oui oui un pelage
-    avec des vagues bleues et vertes en train de \xAB danser \xBB sur la surface
-    de l\u2019eau d\u2019une source qui s\u2019\xE9coule pr\xE8s d\u2019ici. C\u2019\xE9tait
-    vraiment \xE9trange d\u2019ailleurs, car je ne l\u2019avais jamais vu auparavant.
-    Comme si elle \xE9tait apparue par magie ! Le temps de r\xE9aliser ce que j\u2019\xE9tais
-    en train de voir, mon renard avait disparu. Peut-\xEAtre avais-je juste r\xEAv\xE9...\r\n\r\nAttention
-    ne t'approche pas trop pr\xE8s de lui, il risque d\u2019avoir peur\u2026 \n"
+  m_Text: "J\u2019ai enfin trouv\xE9 l\u2019animal extraordinaire qui a laiss\xE9
+    ces empreintes. C\u2019est un renard, avec un pelage bleu et vert incroyable,
+    et il danse \xE0 la surface de l\u2019eau d\u2019une source  ! Je voudrais m\u2019en
+    approcher... Tu peux tourner la page."
 --- !u!222 &1352256020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2552,7 +2545,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1934658301}
+  - {fileID: 1330568781}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2788,7 +2781,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 357250046}
+  - {fileID: 1976987699}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3246,16 +3239,16 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!21 &1934658301
+--- !u!21 &1976987699
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 'Scene2Material
+  m_Name: 'trou RVBpetitMaterial
 
-    151724'
+    174490'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -3268,7 +3261,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 17f5947032724e17ad450d4e9c2f7ba0, type: 3}
+        m_Texture: {fileID: 2800000, guid: a92f82c0497387c49b6a086d1e1c45f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
