@@ -271,15 +271,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nLes souris jouent un r\xF4le important dans l\u2019\xE9cosyst\xE8me
-    malgr\xE9 leurs petites tailles. En effet, ce petit rongeur a\xE8re le sol en
-    fouillant dans la terre et en dispersant les graines.\r\nIl est \xE9galement
-    une proie pour de tr\xE8s nombreux pr\xE9dateurs carnivores sur une grande partie
-    de la plan\xE8te. Ces pr\xE9dateurs sont des reptiles (serpents, l\xE9zards),
-    des oiseaux (rapaces diurnes et nocturnes), et nombreux mammif\xE8res (renards,
-    must\xE9lid\xE9s\u2026 jusqu'au loup qui ne les d\xE9daigne pas quand il manque
-    de proies plus grosses). Ces animaux d\xE9pendent de ce petit animal pour se
-    nourrir et vivre. \r\n"
+  m_Text: "Les souris jouent un r\xF4le important dans l\u2019\xE9cosyst\xE8me malgr\xE9
+    leurs petites tailles. En effet, ce petit rongeur a\xE8re le sol en fouillant
+    dans la terre et en dispersant les graines.\r\nIl est \xE9galement une proie
+    pour de tr\xE8s nombreux pr\xE9dateurs carnivores sur une grande partie de la
+    plan\xE8te. Ces pr\xE9dateurs sont des reptiles (serpents, l\xE9zards), des oiseaux
+    (rapaces diurnes et nocturnes), et nombreux mammif\xE8res (renards, must\xE9lid\xE9s\u2026
+    jusqu'au loup qui ne les d\xE9daigne pas quand il manque de proies plus grosses).
+    Ces animaux d\xE9pendent de ce petit animal pour se nourrir et vivre. \r\n"
 --- !u!222 &59084054
 CanvasRenderer:
   m_ObjectHideFlags: 0
