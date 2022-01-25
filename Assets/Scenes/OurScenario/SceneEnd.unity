@@ -994,14 +994,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 4bc5fd733b147194692297d23f623541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Nourriture 1
+  mTrackableName: Nourriture NB
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 191555882be4cdc4d800c0b29a34f8c8, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 686cbb0008fb4084e887e256720f42a1, type: 3}
 --- !u!4 &597040996
 Transform:
   m_ObjectHideFlags: 0
@@ -1536,7 +1536,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 191555882be4cdc4d800c0b29a34f8c8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 686cbb0008fb4084e887e256720f42a1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []

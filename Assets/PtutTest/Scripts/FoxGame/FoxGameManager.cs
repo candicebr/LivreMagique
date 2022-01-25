@@ -12,6 +12,7 @@ public class FoxGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         count = GameObject.FindGameObjectsWithTag("Enemy").Length;
         progressBar.fillAmount = (3 - count) / 3;
     }
