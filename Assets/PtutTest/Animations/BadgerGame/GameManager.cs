@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     float FillSpeed = 0.2f;
 
     private bool EndGame;
-    AudioSource audioEndGame;
+    AudioSource[] audioEndGame;
 
     // Start is called before the first frame update
     void Start()
@@ -51,13 +51,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("nb good : " + goodCaseToDigged);
 
         EndGame = false;
-        audioEndGame = GetComponent<AudioSource>();
+        audioEndGame = GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EndGame)
         {
             ray = cam.ScreenPointToRay(Input.mousePosition);
 
@@ -84,6 +84,21 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("nb dirt digged : " + goodCaseDigged+badCaseDigged);
 
+        if (badCaseDigged > 10) // lose condition
+        {
+            // Reload scene
+            if (EndGame && !audioEndGame[1].isPlaying)
+            {
+                SceneManager.LoadScene("SceneBadger");
+            }
+            // LoseGame audio
+            else if (!audioEndGame[1].isPlaying)
+            {
+                audioEndGame[1].Play();
+                EndGame = true;
+            }
+        }
+
         if (goodCaseDigged == goodCaseToDigged)
         {
             Debug.Log("Tu as creusé : " + goodCaseDigged + "bonnes cases et " + badCaseDigged + " mauvaises.");
@@ -91,23 +106,24 @@ public class GameManager : MonoBehaviour
             burrow.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, 1);
 
             // Change scene
-            if (EndGame && !audioEndGame.isPlaying)
+            if (EndGame && !audioEndGame[0].isPlaying)
             {
                 Screen.orientation = ScreenOrientation.Portrait;
                 SceneManager.LoadScene("Scene1_new");
             }
-            //EndGame audio
-            else if (!audioEndGame.isPlaying)
+            // EndGame audio
+            else if (!audioEndGame[0].isPlaying)
             {
-                audioEndGame.Play();
+                audioEndGame[0].Play();
                 EndGame = true;
             }
         }
 
         //scoreText.text = "Score : " + goodCaseDigged + " / " + goodCaseToDigged;
-        //Progress Bar
+        // Progress Bar
         if (progressBar.fillAmount < (float)goodCaseDigged / (float)goodCaseToDigged)
             progressBar.fillAmount += FillSpeed * Time.deltaTime;
+
     }
 
     public bool GetEndGame() { return EndGame; }
