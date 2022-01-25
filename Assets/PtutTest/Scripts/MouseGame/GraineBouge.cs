@@ -41,18 +41,21 @@ public class GraineBouge : MonoBehaviour
                 transform.position = positionTrou + new Vector3(0, -0.1f, -0.2f);
                 GameObject.Find("Terre0").GetComponent<TerreCreuse>().graineDansTrou = true;
                 plantee = true;
+                GameObject.Find("Souris").GetComponent<SourisMouvement>().increaseCompteur();
             }
             else if (trouCreuse1 && trouProche1 && trou1Vide)
             {
                 transform.position = positionTrou1 + new Vector3(0, -0.1f, -0.2f);
                 GameObject.Find("Terre1").GetComponent<TerreCreuse>().graineDansTrou = true;
                 plantee = true;
+                GameObject.Find("Souris").GetComponent<SourisMouvement>().increaseCompteur();
             }
             else if (trouCreuse2 && trouProche2 && trou2Vide)
             {
                 transform.position = positionTrou2 + new Vector3(0, -0.1f, -0.2f);
                 GameObject.Find("Terre2").GetComponent<TerreCreuse>().graineDansTrou = true;
                 plantee = true;
+                GameObject.Find("Souris").GetComponent<SourisMouvement>().increaseCompteur();
             }
             else if (sourisProche)
             {

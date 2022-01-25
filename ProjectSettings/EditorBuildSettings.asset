@@ -46,7 +46,7 @@ EditorBuildSettings:
     guid: 61f5b4809275eb94abb09dc4e4e44e7e
   - enabled: 1
     path: Assets/Scenes/OurScenario/SceneBadger.unity
-    guid: 382261316064dd5439537c2063926477
+    guid: d8926c2d86a85c84ea36df67e67c78e1
   - enabled: 1
     path: Assets/Scenes/OurScenario/SceneRabbit.unity
     guid: 5eda9f1fb63c24141a2883f3cb52692f
