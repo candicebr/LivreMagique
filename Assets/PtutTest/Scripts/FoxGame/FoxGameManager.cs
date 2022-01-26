@@ -10,7 +10,7 @@ public class FoxGameManager : MonoBehaviour
     public Image progressBar;
     float FillSpeed = 0.2f;
     AudioSource audioEndGame;
-    bool EndGame = false;
+    bool EndGame;
 
     // Start is called before the first frame update
     void Start()
@@ -19,32 +19,36 @@ public class FoxGameManager : MonoBehaviour
         count = GameObject.FindGameObjectsWithTag("Enemy").Length;
         progressBar.fillAmount = 0;
         audioEndGame = GetComponent<AudioSource>();
+        EndGame = false;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (progressBar.fillAmount < (float)(3 - count) / 3.0f)
-            progressBar.fillAmount += FillSpeed * Time.deltaTime;
-
         if (count == 0)
         {
             // Change scene
             if (EndGame && !audioEndGame.isPlaying)
+            {
+                audioEndGame.Stop();
                 SceneManager.LoadScene("Scene1_new");
+            }
             //EndGame audio
-            else if (!audioEndGame.isPlaying)
+            else if (!EndGame && !audioEndGame.isPlaying)
             {
                 audioEndGame.Play();
                 EndGame = true;
             }
         }
+
+        if (progressBar.fillAmount < (float)(3 - count) / 3.0f)
+            progressBar.fillAmount += FillSpeed * Time.deltaTime;
     }
            
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
+        if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
             count--;
