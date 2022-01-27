@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     private bool EndGame;
     AudioSource[] audioEndGame;
+    public Image rotationScreen;
+    public GameObject sound;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Screen.orientation == ScreenOrientation.LandscapeLeft)
+        {
+            rotationScreen.gameObject.SetActive(false);
+            sound.SetActive(true);
+        }
         if (Input.GetMouseButtonDown(0) && !EndGame)
         {
             ray = cam.ScreenPointToRay(Input.mousePosition);

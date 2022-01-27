@@ -26,16 +26,17 @@ public class FoxGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count == 0)
+        // Change scene
+        if (EndGame && !audioEndGame.isPlaying)
         {
-            // Change scene
-            if (EndGame && !audioEndGame.isPlaying)
-            {
-                audioEndGame.Stop();
-                SceneManager.LoadScene("Scene1_new");
-            }
+            audioEndGame.Stop();
+            SceneManager.LoadScene("Scene1_new");
+        }
+
+        if (count == 0)
+        { 
             //EndGame audio
-            else if (!EndGame && !audioEndGame.isPlaying)
+            if (!EndGame && !audioEndGame.isPlaying)
             {
                 audioEndGame.Play();
                 EndGame = true;

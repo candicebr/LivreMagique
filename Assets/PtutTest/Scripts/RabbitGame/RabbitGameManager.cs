@@ -14,6 +14,9 @@ public class RabbitGameManager : MonoBehaviour
 
     AudioSource audioEndGame;
     bool EndGame = false;
+    public Image rotationScreen;
+    public GameObject sound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,11 @@ public class RabbitGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Screen.orientation == ScreenOrientation.LandscapeLeft)
+        {
+            rotationScreen.gameObject.SetActive(false);
+            sound.SetActive(true);
+        }
         carotsLeft = GameObject.FindGameObjectsWithTag("Interactable").Length;
         scoreText.text = "Encore " + carotsLeft + " carottes a ramasser";
 
