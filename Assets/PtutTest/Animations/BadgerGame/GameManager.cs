@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
             // LoseGame audio
             else if (!audioEndGame[1].isPlaying)
             {
+                sound.GetComponent<AudioSource>().Stop();
                 audioEndGame[1].Play();
                 EndGame = true;
             }
@@ -121,6 +122,7 @@ public class GameManager : MonoBehaviour
             // EndGame audio
             else if (!audioEndGame[0].isPlaying)
             {
+                sound.GetComponent<AudioSource>().Stop();
                 audioEndGame[0].Play();
                 EndGame = true;
             }

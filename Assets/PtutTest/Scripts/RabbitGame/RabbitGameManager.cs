@@ -51,6 +51,7 @@ public class RabbitGameManager : MonoBehaviour
             }
             else if (!audioEndGame.isPlaying)
             {
+                sound.GetComponent<AudioSource>().Stop();
                 audioEndGame.Play();
                 EndGame = true;
             }

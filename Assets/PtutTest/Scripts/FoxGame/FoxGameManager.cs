@@ -9,6 +9,7 @@ public class FoxGameManager : MonoBehaviour
     int count;
     public Image progressBar;
     float FillSpeed = 0.2f;
+    public AudioSource audioStart;
     AudioSource audioEndGame;
     bool EndGame;
 
@@ -38,6 +39,7 @@ public class FoxGameManager : MonoBehaviour
             //EndGame audio
             if (!EndGame && !audioEndGame.isPlaying)
             {
+                audioStart.Stop();
                 audioEndGame.Play();
                 EndGame = true;
             }

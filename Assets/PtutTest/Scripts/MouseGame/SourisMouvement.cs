@@ -19,6 +19,7 @@ public class SourisMouvement : MonoBehaviour
     public Sprite fleur;
     public Image progressBar;
     float FillSpeed = 0.2f;
+    public AudioSource audioStart;
     AudioSource audioEndGame;
     bool EndGame = false;
 
@@ -75,6 +76,7 @@ public class SourisMouvement : MonoBehaviour
                 //EndGame audio
                 else if (!audioEndGame.isPlaying)
                 {
+                    audioStart.Stop();
                     audioEndGame.Play();
                     EndGame = true;
                 }
