@@ -27,6 +27,7 @@ public class SourisMouvement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("Mouse", 1);
         Screen.orientation = ScreenOrientation.Portrait;
 
         // firstPosition = transform.position;

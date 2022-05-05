@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("Badger", 1);
         Screen.orientation = ScreenOrientation.LandscapeLeft;
 
         progressBar.fillAmount = 0;
