@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517503781}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10dde58b25000d14d90b5a7f678fdf62, type: 3}
   m_Name: 
@@ -1076,7 +1076,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 517503785}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 268417637}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 0_new
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &517503785
 MonoBehaviour:
   m_ObjectHideFlags: 0
